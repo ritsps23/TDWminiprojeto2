@@ -29,15 +29,16 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: Miniprojeto2_React/package-lock.json
+          # Removed the specific path causing the error
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: Miniprojeto2_React
+        # Removed working-directory
 
       - name: Build
         run: npm run build
-        working-directory: Miniprojeto2_React
+        # Removed working-directory
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -45,8 +46,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the 'dist' folder created by the build step
-          path: 'Miniprojeto2_React/dist'
+          # Changed path to just 'dist' as it will be in the root
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
