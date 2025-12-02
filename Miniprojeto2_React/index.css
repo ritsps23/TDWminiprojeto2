@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-image: url("assets/backgroundbooks.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 5%;
+  position: relative; 
+  height: 100%;;
+}
+
+
+
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+ .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background:  rgb(52, 52, 52);
+  
+}
+
+.logo {
+  text-decoration: none;
+  color: rgb(237, 191, 255);
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 80px
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  margin-right:80px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 20px;
+
+}
+
+.btn-read, .btn-reading, .btn-want {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-read,
+.btn-reading,
+.btn-want {
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px; /* pill */
+  border: 0.5px solid rgb(207, 207, 207);
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* cores específicas */
+.btn-read {
+  background-color:rgb(52, 52, 52);
+  color: white;
+}
+.btn-read:hover {
+  background-color:rgb(237, 191, 255);
+}
+
+.btn-reading {
+  background-color: rgb(52, 52, 52) ;
+  color: white ;
+}
+.btn-reading:hover {
+  background-color:rgb(237, 191, 255);
+}
+
+.btn-want {
+  background-color: rgb(52, 52, 52);
+  color: white ;
+}
+.btn-want:hover {
+  background-color: rgb(237, 191, 255);
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* opacidade da camada escura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.descricao {
+  margin-top:15px;
+  font-size: 0.8rem;
+}
+
+
+.categoria-box{
+
+  background:rgb(52, 52, 52);
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.categoria-box-title{
+  display: flex;
+  justify-content: center;
+   font-family: Helvetica, sans-serif;
+  color:rgb(227, 227, 227);
+  font-weight: 200;
+  font-size: 1.9rem;
+  margin-bottom: 60px;
+}
+
+
+.category-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 12px; 
+  margin-bottom: 1.5rem;
+}
+
+
+.category-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px; 
+  border: 0.5px solid rgb(207, 207, 207); 
+  background-color: rgb(52, 52, 52);
+  color: rgb(234, 234, 234);
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: rgb(237, 191, 255);
+  color: rgb(52, 52, 52);
+}
+
+
+.category-btn.active {
+  background-color: rgb(237, 191, 255);
+  color: rgb(52, 52, 52);
+}
+
+.livro-card {
+  background-color: white; /* fundo branco */
+  padding: 15px;           /* espaço interno */
+  border-radius: 10px;     /* cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra leve */
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.livro-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.livro-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+ 
+}
+
+.livro-author {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
